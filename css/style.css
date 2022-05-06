@@ -4,7 +4,7 @@
     --golden:#DD9A00;
     --dark:black;
     --green:#007D00;
-    --white:#F7F0F0;
+    --white:#FFFFFC;
     --red:#E71D36;
     --box-shadow: 0 5px 5px #DD9A00;
     
@@ -54,7 +54,6 @@ nav .logo{
     top: 0;
     left: 0;
     background-color: rgba(21, 20, 51, 0.0.8);
-    z-index: -1;
 }
 .hero2Form{
     background-image: url("../img/background/architecture-1857175_1920.jpg");
@@ -70,7 +69,7 @@ nav .logo{
     top: 0;
     left: 0;
     background-color: rgba(21, 20, 51, 0.0.8);
-    z-index: -1;
+  
 }
 section{
     padding-top: 120px;
