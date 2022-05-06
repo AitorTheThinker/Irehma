@@ -5,16 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="icon" href="/img/logos/negro.png" type="image/gif" sizes="16x16">
     <title>IREHMA</title>
 </head>
+<body>
+
 <body>  
-  <div class="inside-top-bar grid-container grid-parent" style="background-color: #F7F0F0;"><aside id="custom_html-2" class="widget_text widget inner-padding widget_custom_html">
+<div class="inside-top-bar grid-container grid-parent" style="background-color: #F7F0F0;"><aside id="custom_html-2" class="widget_text widget inner-padding widget_custom_html">
     <div class="textwidget custom-html-widget"><p style="text-align:center">¿Piensas hacer una reforma en tu comunidad? <strong>Llama ahora al <a href="tel:+34676152810" rel="nofollow">676152810</a> o <a href="#contacta" rel="nofollow">contacta</a></div>
     <nav class="navbar sticky-top navbar-expand-lg navbar-light " style="background-color: #DD9A00;"> 
         <div class="container-fluid">
-          <a class="navbar-brand" href="index.html"> <img  class="logo" src="img/logos/blanco.png" >
+          <a class="navbar-brand" href="../index.html"> <img  class="logo" src="../img/logos/blanco.png">
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -22,24 +24,26 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.html">Irehma</a>
+                <a class="nav-link active" aria-current="page" href="../index.html">Irehma</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#sobre_nosotros">¿Quiénes somos?</a>
+                <a class="nav-link" href="#sobre_nosotros">Sobre nosotros</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="./BBDD/mostrar_reformas.php">Reformas</a>
+                <a class="nav-link" href="./mostrar_reformas.php">Reformas</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="./BBDD/mostrar_proyectos.php">Proyectos</a>
+                <a class="nav-link" href="./mostrar_proyectos.php">Proyectos</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="./BBDD/otros_servicios.php">Otros Servicios</a>
+                <a class="nav-link" href="./otros_servicios.php">Otros Servicios</a>
               </li>
-              <!-- Contacto-formulario de correo para Particulares y Empresas-->
+              <!-- Presupuesto para Particulares y Empresas-->
+              <li class="nav-item dropdown">
                 <li class="nav-item">
-                    <a class="nav-link" href="./contacto/form_particular.html">Contacto</a>
-                  </li>
+                        <a class="nav-link" href="../contacto/form_particular.html">Contacto</a>
+                </li>
+              </li>
             </ul>
           </div>
         </div>
@@ -162,7 +166,7 @@
                   <h5 class="text-black">Contact</h5>
                   <ul class="list-unstyled">
                       <li>Dirección: Pasaje las castellanas 1070</li>
-                      <li>Correo: info@irehma.es</li>
+                      <li>Correo: irehma@gmail.com</li>
                       <li>Teléfono: 676152810</li>
                   </ul>
               </div>
@@ -183,3 +187,72 @@
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>
+<section id="contenedor">
+	<h1>Listado de reformas</h1>
+
+	<?php
+	// <?php levanta interprete de php.
+
+	/* Conectar archivo conexion a este archivo. (include('conexion_agenda.php')---Para conectar y si dar error sigue la ejecucion del programa.)*/
+	require('conexion.php');
+	// echo sirve para mostrar info por pantalla.
+	// 1.- Conexion.
+	if($conexion=mysqli_connect($servidor, $usuario, $password, $bbdd)){
+		// Entramos por aqui...
+		mysqli_query($conexion, "SET NAMES 'UTF8'");
+		// 2.- Seleccionamos la base de datos. 	
+		if(mysqli_select_db($conexion, $bbdd)){
+			// 3.- Definimos la query.
+			$consulta="SELECT * FROM reformas ORDER BY cod_reforma;";
+			// 4.- Ejecutar la query.
+			$resultado=mysqli_query($conexion, $consulta);
+			// 5.- Comprobar.
+			//Si hay algun error, lo muestro en caso contrario continuo con el WHILE.
+			if(mysqli_errno($conexion)!=0){
+				//Quiere decir que hay un error.
+				echo "<p>No error: ".mysqli_errno($conexion)."</p>";
+				echo "<p>Mensaje error: ".mysqli_error($conexion)."</p>";
+			} else{
+				//Quiere decir que no hay error.
+			}
+			// 6.- Mostrar datos por pantalla (Si es un query SELECT)
+
+			while($dato=mysqli_fetch_array($resultado)){
+				//echo "<p class='negrita'>".$dato["nombre"]." ".$dato["apellidos"]."</p>";
+
+				echo "<p><a href='mostrar_reformas.php?codigo=$dato[0]'>$dato[nombre]</a></p>";
+			} 
+		}
+        if(mysqli_select_db($conexion, $bbdd)){
+			// 3.- Definimos la query.
+			$consulta="SELECT * FROM fotos ORDER BY cod_foto;";
+			// 4.- Ejecutar la query.
+			$resultado=mysqli_query($conexion, $consulta);
+			// 5.- Comprobar.
+			//Si hay algun error, lo muestro en caso contrario continuo con el WHILE.
+			if(mysqli_errno($conexion)!=0){
+				//Quiere decir que hay un error.
+				echo "<p>No error: ".mysqli_errno($conexion)."</p>";
+				echo "<p>Mensaje error: ".mysqli_error($conexion)."</p>";
+			} else{
+				//Quiere decir que no hay error.
+			}
+			// 6.- Mostrar datos por pantalla (Si es un query SELECT)
+
+			while($dato=mysqli_fetch_array($resultado)){
+				//echo "<p class='negrita'>".$dato["nombre"]." ".$dato["apellidos"]."</p>";
+
+				echo "<img src='../img/reformas/$dato[nombre]'>";
+			} 	
+		}
+	// 7.- Cerramos la conexion.
+	mysqli_close($conexion);
+	}
+	/* ?> cierra el interprete.*/
+	?>
+</section>
+</body>
+</html>
+
+
+
