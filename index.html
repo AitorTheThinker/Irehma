@@ -5,15 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="/img/logos/negro.png" type="image/gif" sizes="16x16">
     <title>IREHMA</title>
 </head>
 <body>  
   <div class="inside-top-bar grid-container grid-parent" style="background-color: #F7F0F0;"><aside id="custom_html-2" class="widget_text widget inner-padding widget_custom_html">
-    <div class="textwidget custom-html-widget"><p style="text-align:center">¿Piensas hacer una reforma en tu comunidad? <strong>Llama ahora al <a href="tel:+34645351045" rel="nofollow">645351045</a> o <a href="#" rel="nofollow">contacta</a></div>
-    <nav class="navbar navbar-expand-lg navbar-light " style="background-color: #DD9A00;"> 
+    <div class="textwidget custom-html-widget"><p style="text-align:center">¿Piensas hacer una reforma en tu comunidad? <strong>Llama ahora al <a href="tel:+34676152810" rel="nofollow">676152810</a> o <a href="#contacta" rel="nofollow">contacta</a></div>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light " style="background-color: #DD9A00;"> 
         <div class="container-fluid">
-          <a class="navbar-brand" href="index.html"> <img  class="logo" src="img/logos/letras.png" >
+          <a class="navbar-brand" href="index.html"> <img  class="logo" src="img/logos/blanco.png" >
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -21,32 +22,25 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                <a class="nav-link active" aria-current="page" href="index.html">Irehma</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#sobre_nosotros">Sobre nosotros</a>
+                <a class="nav-link" href="#sobre_nosotros">¿Quiénes somos?</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="reformas/reformas.html">Reformas</a>
+                <a class="nav-link" href="./BBDD/mostrar_reformas.php">Reformas</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="proyectos/proyecto.html">Proyectos</a>
+                <a class="nav-link" href="./BBDD/mostrar_proyectos.php">Proyectos</a>
               </li>
-              <!-- Presupuesto para Particulares y Empresas-->
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Presupuesto
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">Particulares</a></li>
-                  <li><a class="dropdown-item" href="#">Empresa</a></li>
-                </ul>
+              <li class="nav-item">
+                <a class="nav-link" href="./BBDD/otros_servicios.php">Otros Servicios</a>
               </li>
+              <!-- Contacto-formulario de correo para Particulares y Empresas-->
+                <li class="nav-item">
+                    <a class="nav-link" href="./contacto/form_particular.html">Contacto</a>
+                  </li>
             </ul>
-            <form class="d-flex">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
           </div>
         </div>
       </nav>
@@ -57,8 +51,6 @@
       <div class="row">
           <div class="col-lg-7 mx-auto text-center">
               <h1 class="display-4"></h1>
-              <a href="#" class="btn me-2 btn-primary" style="background-color: rgba(235,171,7,1);">Conócenos</a>
-              <a href="#" class="btn btn-outline-light" style="background-color: rgba(235,171,7,1);">Contacto</a>
           </div>
       </div>
   </div>
@@ -166,12 +158,12 @@
                       <li><a href="#">Shipment</a></li>
                   </ul>
               </div>
-              <div class="col-lg-4">
+              <div class="col-lg-4" id="contacta">
                   <h5 class="text-black">Contact</h5>
                   <ul class="list-unstyled">
-                      <li>Dirección Pasaje las castellanas 1070</li>
-                      <li>Correo: irehma@gmail.com</li>
-                      <li>Teléfono: 645351045</li>
+                      <li>Dirección: Pasaje las castellanas 1070</li>
+                      <li>Correo: info@irehma.es</li>
+                      <li>Teléfono: 676152810</li>
                   </ul>
               </div>
           </div>
