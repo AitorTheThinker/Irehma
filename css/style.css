@@ -2,7 +2,7 @@
 
 :root{
     --golden:#DD9A00;
-    --dark:black;
+    --dark:#24292F;
     --green:#007D00;
     --white:#FFFFFC;
     --red:#E71D36;
@@ -13,7 +13,7 @@
 body {
     line-height: 2;
     color:var(--dark);
-    background-color: var(--golden);
+    background-color: var(--white);
 }
 
 h1,h2,h3,h4,h5,h6,
@@ -44,6 +44,8 @@ nav .logo{
     background-position:center;
     background-size:cover;
     background-attachment:fixed;
+    background-repeat: no-repeat;
+    position: relative;
 }
 
 .hero:after{
@@ -60,6 +62,7 @@ nav .logo{
     background-position:center;
     background-size:cover;
     background-attachment:fixed;
+    z-index: -1;
 }
 .hero2Form:after{
     content: "";
@@ -69,11 +72,41 @@ nav .logo{
     top: 0;
     left: 0;
     background-color: rgba(21, 20, 51, 0.0.8);
-  
+  z-index: -1;
+}
+.hero3Proyecto{
+    background-image: url("../img/background/proyecto_irehma.png");
+    background-position:center;
+    background-size:cover;
+    background-attachment:fixed;
+    z-index: -1;
+}
+.hero3Proyecto:after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(21, 20, 51, 0.0.8);
+  z-index: -1;
+}
+#form{
+    background-color: var(--white);
+    border-radius: 2%;
+    border-color: #DD9A00;
+    box-sizing: border-box;
+    z-index: 1;
 }
 section{
     padding-top: 120px;
     padding-bottom: 120px;
+    border: 2px solid #DD9A00;
+    border-radius: 4px;
+    
+}
+#services{
+    background-color: #FFFFFC;
 }
 .card-effect{
     box-shadow: var(--box-shadow);
@@ -85,4 +118,349 @@ section{
 .card-effect:hover{
     box-shadow: none;
     transform: translateY(5px);
+}
+.footerIrehma{
+    width: 55%;
+    height: 55%;
+    max-width: 500px;
+}
+.card-img-top{
+
+    width: 450;
+    height: 550px;
+}
+.fondo_footer{
+    background-color: var(--golden);
+    color: var(--green);
+}
+/* Extra small devices (portrait phones, less than 576px)
+ No media query for `xs` since this is the default in Bootstrap */
+
+/* Small devices (landscape phones, 576px and up)*/
+@media (min-width: 280px) { 
+    .hero{
+        background-image: url("../img/logos/negro.png");
+        background-position:center;
+        background-size: 360px 655px;
+        background-attachment:fixed;
+        background-repeat: no-repeat;
+        position: relative;
+        background-color: var(--white);
+        
+    }
+    .container_galeria{
+        background-color: var(--dark);
+    }
+    .reformas{
+        border: 2px solid white;
+        width: 450px;
+        height: 475px;
+        margin: 0 !important;
+        padding: 15px;
+    }
+    
+}
+@media (min-width: 360px) { 
+    .hero{
+        background-image: url("../img/logos/negro.png");
+        background-position:center;
+        background-size: 450px 700px;
+        background-attachment:fixed;
+        background-repeat: no-repeat;
+        position: relative;
+        background-color: var(--white);
+    }
+    .container_galeria{
+        background-color: var(--dark);
+    }
+    .reformas{
+        border: 2px solid white;
+        width: 450px;
+        height: 475px;
+        margin: 0 !important;
+        padding: 15px;
+    }
+}
+@media (min-width: 374px) { 
+    .hero{
+        background-image: url("../img/logos/negro.png");
+        background-position:center;
+        background-size:555px 700px;
+        background-attachment:fixed;
+        background-repeat: no-repeat;
+        position: relative;
+    }
+    .container_galeria{
+        background-color: var(--dark);
+    }
+    .reformas{
+        border: 2px solid white;
+        width: 450px;
+        height: 475px;
+        margin: 0 !important;
+        padding: 15px;
+    }
+
+}
+@media (min-width: 570px) { 
+    .hero{
+        background-image: url("../img/logos/negro.png");
+        background-position:center;
+        background-size:755px 700px;
+        background-attachment:fixed;
+        background-repeat: no-repeat;
+        position: relative;
+    }
+    .container_galeria{
+        background-color: var(--dark);
+    }
+    .reformas{
+        border: 2px solid white;
+        width: 450px;
+        height: 475px;
+        margin: 0 !important;
+        padding: 15px;
+    }
+}
+@media (min-width: 576px) { 
+    .hero{
+        background-image: url("../img/logos/negro.png");
+        background-position:center;
+        background-size:800px 700px;
+        background-attachment:fixed;
+        background-repeat: no-repeat;
+        position: relative;
+        margin: 0;
+        padding: 0;
+    }
+    .container_galeria{
+        background-color: var(--dark);
+    }
+    .reformas{
+        border: 2px solid white;
+        width: 450px;
+        height: 475px;
+        margin: 0 !important;
+        padding: 15px;
+    }
+
+}
+
+/*Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {  
+    .hero{
+        background-image: url("../img/logos/negro.png");
+        background-position:center;
+        background-size:1000px 700px;
+        background-attachment:fixed;
+        background-repeat: no-repeat;
+        position: relative;
+        margin: 0;
+        padding: 0;
+    }
+    .container_galeria{
+        background-color: var(--dark);
+    }
+    .reformas{
+        border: 2px solid white;
+        width: 450px;
+        height: 475px;
+        margin: 0 !important;
+        padding: 15px;
+    }
+}
+
+/*Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) {       
+    .hero{
+    background-image: url("../img/logos/negro.png");
+    background-position:center;
+    background-size:1400px;
+    background-attachment:fixed;
+    background-repeat: no-repeat;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+.container_galeria{
+    background-color: var(--dark);
+}
+.reformas{
+    border: 2px solid white;
+    width: 450px;
+    height: 475px;
+    margin: 0 !important;
+    padding: 15px;
+}
+.social-icon{
+    max-width: 5px;
+}
+.hero3Proyecto{
+    background-image: url("../img/background/proyecto_irehma.png");
+    background-position:center;
+    background-size:900px;
+    background-attachment:fixed;
+    background-repeat:no-repeat ;
+    z-index: -1;
+}
+.hero3Proyecto:after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(21, 20, 51, 0.0.8);
+  z-index: -1;
+}
+}
+
+/* Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {      .hero{
+    background-image: url("../img/logos/negro.png");
+    background-position:center;
+    background-size:1678px;
+    background-attachment:fixed;
+    background-repeat: no-repeat;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+.container_galeria{
+    background-color: var(--dark);
+}
+.reformas{
+    border: 2px solid white;
+    width: 450px;
+    height: 475px;
+    margin: 0 !important;
+    padding: 15px;
+}
+}
+@media (min-width: 1920px) {      .hero{
+    background-image: url("../img/logos/negro.png");
+    background-position:center;
+    background-size:1978px;
+    background-attachment:fixed;
+    background-repeat: no-repeat;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    
+}
+.hero3Proyecto{
+    background-image: url("../img/background/proyecto_irehma.png");
+    background-position:center;
+    background-size:1200px;
+    background-attachment:fixed;
+    z-index: -1;
+}
+.hero3Proyecto:after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(21, 20, 51, 0.0.8);
+  z-index: -1;
+}
+
+}
+#logo_insta{
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    border-style: solid;
+    border-width: 1em;
+    border-color: var(--golden) rgb(0,128,129) black silver;
+    vertical-align: middle;
+    outline: white solid 0.1em;
+    margin-right: 50px;
+}
+#logo_face{
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    background-color: white;
+    border-style: solid;
+    border-width: 1em;
+    border-color: var(--golden) rgb(0,128,129) black silver;
+    vertical-align: middle;
+    outline: white solid 0.1em;
+    margin-right:50px;
+}
+#logo_twitter{
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    background-color: white;
+    border-style: solid;
+    border-width: 1em;
+    border-color: var(--golden) rgb(0,128,129) black silver;
+    vertical-align: middle;
+    outline: white solid 0.1em;
+    margin-right:50px;
+}
+#logo_yt{
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    background-color: white;
+    border-style: solid;
+    border-width: 1em;
+    border-color: var(--golden) rgb(0,128,129) black silver;
+    vertical-align: middle;
+    outline: white solid 0.1em;
+}
+.btn{
+    font-size: 20px;
+    position: relative;
+    border-radius: 30px;
+    color: var(--white);
+    background-color: var(--green)
+}
+footer{
+    background-color: #DD9A00;
+}
+body{
+    background-color: var(--dark);
+}
+.galeria .col-lg-4{
+    margin: 0 !important;
+    padding: 15px;
+}
+.galeria img{
+    width: 100%;
+    height: 100%;
+}
+
+.galeria img:hover{
+   border: 2px solid white;
+}
+
+.text-center{
+    color: white;
+}
+.card-text{
+color: var(--dark);
+}
+
+h5{
+    font-size: 30px;
+    font-weight: bold;
+}
+.container_galeria{
+    background-color: var(--dark);
+}
+.reformas{
+    border: 2px solid white;
+    width: 450px;
+    height: 475px;
+    margin: 0 !important;
+    padding: 15px;
+}
+#llave_en_mano{
+    width: 370px;
+    height: 250px;
 }

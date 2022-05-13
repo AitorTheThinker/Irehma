@@ -4,17 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link a galería de bootstrap  --> 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="icon" href="/img/logos/negro.png" type="image/gif" sizes="16x16">
+    <script src="../js/js.js"></script>
+    <link rel="icon" href="../img/logos/Irehma.png" type="image/gif" sizes="16x16">
     <title>IREHMA</title>
 </head>
 <body>
 
 <body>  
-<div class="inside-top-bar grid-container grid-parent" style="background-color: #F7F0F0;"><aside id="custom_html-2" class="widget_text widget inner-padding widget_custom_html">
-    <div class="textwidget custom-html-widget"><p style="text-align:center">¿Piensas hacer una reforma en tu comunidad? <strong>Llama ahora al <a href="tel:+34676152810" rel="nofollow">676152810</a> o <a href="#contacta" rel="nofollow">contacta</a></div>
-    <nav class="navbar sticky-top navbar-expand-lg navbar-light " style="background-color: #DD9A00;"> 
+<div class="inside-top-bar grid-container grid-parent" style="background-color: #DD9A00"><aside id="custom_html-2" class="widget_text widget inner-padding widget_custom_html">
+    <div class="textwidget custom-html-widget"><p style="text-align:center">¿Piensas hacer una reforma en tu comunidad? <strong>Llama ahora al <a href="tel:+34654111201" rel="nofollow">654111201</a> o <a href="./contacto/form_particular.html" rel="nofollow">contacta</a></div>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light " style="background-color: #F7F0F0;"> 
         <div class="container-fluid">
           <a class="navbar-brand" href="../index.html"> <img  class="logo" src="../img/logos/blanco.png">
           </a>
@@ -50,94 +52,95 @@
       </nav>
 
 <!-- HERO -->
-<div class="hero vh-100 d-flex align-items-center" id="home">
-  <div class="container">
-      <div class="row">
-          <div class="col-lg-7 mx-auto text-center">
-              <h1 class="display-4"></h1>
-          </div>
-      </div>
-  </div>
+<div class="hero vh-100 align-items-center">
+
 </div>
 <!--Fin del Hero -->
- <!-- SERVICES, indicaremos nuestros servicios -->
- <section id="services">
-  <div class="container">
-      <div class="row mb-5">
-          <div class="col-md-8 mx-auto text-center">
-              <h1  id="sobre_nosotros">Sobre nosotros</h1>
-              <p>SERVICIO “Llave en Mano”, que liberan al cliente de las GESTIONES Y TRÁMITES:</p>
-          </div>
-      </div>
-      <div class="row g-4">
-          <div class="col-lg-4 col-sm-6">
-              <div class="service card-effect bounceInUp">
-                  <div class="iconbox">
-                      <i class='bx bxs-check-shield'></i>
-                  </div>
-                  <h5 class="mt-4 mb-2">FINANCIACIÓN</h5>
-                  <p>Nuestros principales clientes son las Comunidades de Propietarios.  </p>
-              </div>
-          </div>
-          <div class="col-lg-4 col-sm-6">
-              <div class="service card-effect">
-                  <div class="iconbox">
-                      <i class='bx bxs-comment-detail'></i>
-                  </div>
-                  <h5 class="mt-4 mb-2">HONORARIOS TÉCNICOS</h5>
-                  <p>Proyecto, Dirección de obra, cumplimiento de Seguridad y Salud… </p>
-              </div>
-          </div>
-          <div class="col-lg-4 col-sm-6">
-              <div class="service card-effect">
-                  <div class="iconbox">
-                      <i class='bx bxs-cog'></i>
-                  </div>
-                  <h5 class="mt-4 mb-2">SUBVENCIONES</h5>
-                  <p>Experiencia en convocatorias anteriores y CONSTANCIA. </p>
-              </div>
-          </div>
-          <div class="col-lg-4 col-sm-6">
-              <div class="service card-effect">
-                  <div class="iconbox">
-                      <i class='bx bxs-heart'></i>
-                  </div>
-                  <h5 class="mt-4 mb-2">LICENCIA Y PERMISOS OCUPACIÓN</h5>
-                  <p>Ante Ayuntamiento y/ó Junta Municipal correspondiente. </p>
-              </div>
-          </div>
-          <div class="col-lg-4 col-sm-6">
-              <div class="service card-effect">
-                  <div class="iconbox">
-                      <i class='bx bxs-rocket'></i>
-                  </div>
-                  <h5 class="mt-4 mb-2">IREHMA ofrece</h5>
-                  <p>Equipo con EXPERIENCIA  de años en REHABILITACIÓN (Técnicos y Trabajadores cualificados)
-
-                    CUMPLIMIENTO  de  la CALIDAD ofrecida en presupuestos así como con  los PLAZOS de ejecución pactados.
-                    
-                    IMPLICACIÓN en nuestras GESTIONES de principio a fin. 
-                    
-                    INTERÉS en cada OBRA por conseguir el mejor resultado. Nuestra mejor publicidad son los CLIENTES SATISFECHOS. 
-                     </p>
-              </div>
-          </div>
-          <div class="col-lg-4 col-sm-6">
-              <div class="service card-effect">
-                  <div class="iconbox">
-                      <i class='bx bxs-doughnut-chart'></i>
-                  </div>
-                  <h5 class="mt-4 mb-2">¡¡Conócenos!!</h5>
-                  <p>Empresa  Especializada en la Conservación  y Rehabilitación de Edificios</p>
-              </div>
-          </div>
-      </div>
-  </div>
-</section>
-<!-- SERVICES -->
 
   <!--Fin del contenedor-->
 </div>
+<!-- Carousel wrapper -->
+<div
+  id="carouselMultiItemExample"
+  class="carousel slide carousel-dark text-center"
+  data-mdb-ride="carousel"
+>
+
+  <!-- Inner -->
+  <div class="carousel-inner py-4">
+    <!-- Single item -->
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-md-8 mx-auto text-center">
+                    <img src="../img/logos/irehma footer.png" alt="irehma_footer" class="footerIrehma">
+                    <h1  id="sobre_nosotros">Realizamos muchos otros servicios!</h1>
+    
+                    <p> En PUNTO OBRAS encontrará un gran abanico de posibilidades, somos una empresa multidisciplinar y además de los mencionados anteriormente; tenemos un gran catálogo de servicios específicos  que ofrecer.Instalaciones eléctricas y adecuación a la normativa vigente. Adecuación del edificio a personas con minusvalía.Reparación de redes de acceso, portales y escaleras.</p>
+                </div>
+            </div>
+    <div class="carousel-item active">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="card">
+              <img
+                src="../img/reformas/fachada1.png"
+                class="card-img-top"
+                alt="fachada1"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Reformas</h5>
+                <p class="card-text">
+                    Restauración o sustitución de revocos tradicionales (rasqueta, mar-
+                    tillina, imitación ladrillo, etc). enfoscados, revestimientos monocapa.
+                </p>
+                <a href="../contacto/form_particular.html" class="btn">Contacta ya!</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="card">
+              <img src="../img/logos/proyecto_irehma.png" class="card-img-top" alt="proyectoIrehma"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Proyectos</h5>
+                <p class="card-text">
+                    Nuestra misión es crecer en la Comunidad de Madrid elabor el mejor trabajo posible ofreciendo calidad en nuestros servicios de manera eficiente.
+                </p>
+                <a href="../contacto/form_particular.html" class="btn">Contacta ya!</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="card">
+              <img
+                src="../img/reformas/remate1.JPG"
+                class="card-img-top"
+                alt="Sunset over the Sea"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Remates de obra</h5>
+                <p class="card-text">
+                    Conocemos la importancia para una constructora el remate y la limpieza final de obra.
+                    La higienización, remate y limpieza de obra es un servicio esencial.
+                </p>
+                <a href="../contacto/form_particular.html" class="btn">Contacta ya!</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FIN CARDS -->
+   
+   
+  </div>
+  <!-- Inner -->
+</div>
+<!-- Carousel wrapper -->
 <!-- INICIO DEL FOOTER-->
 <footer>
   <div class="footer-top">
@@ -186,71 +189,6 @@
 </footer>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
-</html>
-<section id="contenedor">
-	<h1>Listado de reformas</h1>
-
-	<?php
-	// <?php levanta interprete de php.
-
-	/* Conectar archivo conexion a este archivo. (include('conexion_agenda.php')---Para conectar y si dar error sigue la ejecucion del programa.)*/
-	require('conexion.php');
-	// echo sirve para mostrar info por pantalla.
-	// 1.- Conexion.
-	if($conexion=mysqli_connect($servidor, $usuario, $password, $bbdd)){
-		// Entramos por aqui...
-		mysqli_query($conexion, "SET NAMES 'UTF8'");
-		// 2.- Seleccionamos la base de datos. 	
-		if(mysqli_select_db($conexion, $bbdd)){
-			// 3.- Definimos la query.
-			$consulta="SELECT * FROM reformas ORDER BY cod_reforma;";
-			// 4.- Ejecutar la query.
-			$resultado=mysqli_query($conexion, $consulta);
-			// 5.- Comprobar.
-			//Si hay algun error, lo muestro en caso contrario continuo con el WHILE.
-			if(mysqli_errno($conexion)!=0){
-				//Quiere decir que hay un error.
-				echo "<p>No error: ".mysqli_errno($conexion)."</p>";
-				echo "<p>Mensaje error: ".mysqli_error($conexion)."</p>";
-			} else{
-				//Quiere decir que no hay error.
-			}
-			// 6.- Mostrar datos por pantalla (Si es un query SELECT)
-
-			while($dato=mysqli_fetch_array($resultado)){
-				//echo "<p class='negrita'>".$dato["nombre"]." ".$dato["apellidos"]."</p>";
-
-				echo "<p><a href='mostrar_reformas.php?codigo=$dato[0]'>$dato[nombre]</a></p>";
-			} 
-		}
-        if(mysqli_select_db($conexion, $bbdd)){
-			// 3.- Definimos la query.
-			$consulta="SELECT * FROM fotos ORDER BY cod_foto;";
-			// 4.- Ejecutar la query.
-			$resultado=mysqli_query($conexion, $consulta);
-			// 5.- Comprobar.
-			//Si hay algun error, lo muestro en caso contrario continuo con el WHILE.
-			if(mysqli_errno($conexion)!=0){
-				//Quiere decir que hay un error.
-				echo "<p>No error: ".mysqli_errno($conexion)."</p>";
-				echo "<p>Mensaje error: ".mysqli_error($conexion)."</p>";
-			} else{
-				//Quiere decir que no hay error.
-			}
-			// 6.- Mostrar datos por pantalla (Si es un query SELECT)
-
-			while($dato=mysqli_fetch_array($resultado)){
-				//echo "<p class='negrita'>".$dato["nombre"]." ".$dato["apellidos"]."</p>";
-
-				echo "<img src='../img/reformas/$dato[nombre]'>";
-			} 	
-		}
-	// 7.- Cerramos la conexion.
-	mysqli_close($conexion);
-	}
-	/* ?> cierra el interprete.*/
-	?>
-</section>
 </body>
 </html>
 

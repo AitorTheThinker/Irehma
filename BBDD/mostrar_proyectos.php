@@ -4,17 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link a galería de bootstrap  --> 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="icon" href="/img/logos/negro.png" type="image/gif" sizes="16x16">
+    <script src="../js/js.js"></script>
+    <link rel="icon" href="../img/logos/Irehma.png" type="image/gif" sizes="16x16">
     <title>IREHMA</title>
 </head>
 <body>
 
 <body>  
-  <div class="inside-top-bar grid-container grid-parent" style="background-color: #F7F0F0;"><aside id="custom_html-2" class="widget_text widget inner-padding widget_custom_html">
-    <div class="textwidget custom-html-widget"><p style="text-align:center">¿Piensas hacer una reforma en tu comunidad? <strong>Llama ahora al <a href="tel:+34676152810" rel="nofollow">676152810</a> o <a href="#contacta" rel="nofollow">contacta</a></div>
-    <nav class="navbar sticky-top navbar-expand-lg navbar-light " style="background-color: #DD9A00;"> 
+<div class="inside-top-bar grid-container grid-parent" style="background-color: #DD9A00"><aside id="custom_html-2" class="widget_text widget inner-padding widget_custom_html">
+    <div class="textwidget custom-html-widget"><p style="text-align:center">¿Piensas hacer una reforma en tu comunidad? <strong>Llama ahora al <a href="tel:+34654111201" rel="nofollow">654111201</a> o <a href="./contacto/form_particular.html" rel="nofollow">contacta</a></div>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light " style="background-color: #F7F0F0;"> 
         <div class="container-fluid">
           <a class="navbar-brand" href="../index.html"> <img  class="logo" src="../img/logos/blanco.png">
           </a>
@@ -41,7 +43,7 @@
               <!-- Presupuesto para Particulares y Empresas-->
                 <li class="nav-item">
                         <a class="nav-link" href="../contacto/form_particular.html">Contacto</a>
-                      </li>
+                </li>
               </li>
             </ul>
           </div>
@@ -49,7 +51,7 @@
       </nav>
 
 <!-- HERO -->
-<div class="hero vh-100 d-flex align-items-center" id="home">
+<div class="hero3Proyecto vh-100 d-flex align-items-center" id="home">
   <div class="container">
       <div class="row">
           <div class="col-lg-7 mx-auto text-center">
@@ -64,8 +66,10 @@
   <div class="container">
       <div class="row mb-5">
           <div class="col-md-8 mx-auto text-center">
-              <h1  id="sobre_nosotros">Sobre nosotros</h1>
-              <p>SERVICIO “Llave en Mano”, que liberan al cliente de las GESTIONES Y TRÁMITES:</p>
+              <h1  id="sobre_nosotros">Proyecto Irehma</h1>
+              <p>para hacer realidad cada proyecto, analizamos, estudiamos y planteamos la viabilidad
+técnica y económica para que puedan hacer frente a esta inversión, buscando el equilibrio entre inversión y
+retorno.</p>
           </div>
       </div>
       <div class="row g-4">
@@ -111,6 +115,8 @@
                       <i class='bx bxs-rocket'></i>
                   </div>
                   <h5 class="mt-4 mb-2">IREHMA ofrece</h5>
+                  <img src="../img/background/llave_en_mano.jpg" alt="Llave en mano" id="llave_en_mano">
+              <p>SERVICIO “Llave en Mano”, que liberan al cliente de las GESTIONES Y TRÁMITES:</p>
                   <p>Equipo con EXPERIENCIA  de años en REHABILITACIÓN (Técnicos y Trabajadores cualificados)
 
                     CUMPLIMIENTO  de  la CALIDAD ofrecida en presupuestos así como con  los PLAZOS de ejecución pactados.
@@ -129,6 +135,7 @@
                   <h5 class="mt-4 mb-2">¡¡Conócenos!!</h5>
                   <p>Empresa  Especializada en la Conservación  y Rehabilitación de Edificios</p>
               </div>
+
           </div>
       </div>
   </div>
