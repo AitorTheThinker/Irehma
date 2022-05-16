@@ -1,22 +1,22 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" >
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="icon" href="/img/logos/negro.png" type="image/gif" sizes="16x16">
-    <title>IREHMA</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="../css/gallery.css">
+  <link rel="icon" href="../img/logos/Irehma.png" type="image/gif" sizes="16x16">
+  <title>IREHMA</title>
 </head>
 <body>
-
-<body>  
-<div class="inside-top-bar grid-container grid-parent" style="background-color: #F7F0F0;"><aside id="custom_html-2" class="widget_text widget inner-padding widget_custom_html">
-    <div class="textwidget custom-html-widget"><p style="text-align:center">¿Piensas hacer una reforma en tu comunidad? <strong>Llama ahora al <a href="tel:+34676152810" rel="nofollow">676152810</a> o <a href="#contacta" rel="nofollow">contacta</a></div>
-    <nav class="navbar sticky-top navbar-expand-lg navbar-light " style="background-color: #DD9A00;"> 
+<div class="inside-top-bar grid-container grid-parent"><aside class="widget_text widget inner-padding widget_custom_html">
+    <div class="firstRow"><p>¿Piensas hacer una reforma en tu comunidad? <strong>Llama ahora al <a href="tel:+34654111201" rel="nofollow">654111201</a> o <a href="./contacto/form_particular.html" rel="nofollow">contacta</a></div>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light "> 
         <div class="container-fluid">
-          <a class="navbar-brand" href="../index.html"> <img  class="logo" src="../img/logos/blanco.png">
+          <a class="navbar-brand" href="../index.html"> <img class="logo" src="../img/logos/blanco.png">
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -27,7 +27,7 @@
                 <a class="nav-link active" aria-current="page" href="../index.html">Irehma</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#sobre_nosotros">¿Quiénes somos?</a>
+                <a class="nav-link" href="../index.html#sobre_nosotros">¿Quiénes somos?</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="./mostrar_reformas.php">Reformas</a>
@@ -43,129 +43,394 @@
                         <a class="nav-link" href="../contacto/form_particular.html">Contacto</a>
                 </li>
             </ul>
+            <ul class="navbarIcons me-auto mb-2 mb-lg-0">
+              <li class="nav-item"><a class="social-icon" href="https://www.instagram.com/irehmadrid/" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a></li>
+              <li class="nav-item"><a class="social-icon" href="https://www.facebook.com/Irehma-104627448911974" target="_blank"><ion-icon name="logo-facebook" ></ion-icon></a></li>
+              <li class="nav-item"><a class="social-icon" href="https://twitter.com/irehmamadrid" target="_blank"><ion-icon name="logo-twitter" ></ion-icon></a></li>
+              <li class="nav-item"><a class="social-icon" href="https://www.youtube.com/channel/UCGFSYqJb2E5k2j1EgTfAUoQ" target="_blank" ><ion-icon name="logo-youtube"></ion-icon></a></li>
+            </ul>
           </div>
         </div>
       </nav>
-
-<!-- HERO -->
-<div class="hero vh-100 d-flex align-items-center" id="home">
+<!-- partial:index.partial.html -->
+<section id="gallery">
+<div class="tituloGaleria">
+<h1>Galería de Reformas</h1>
+<img src="../img/logos/tools-312334.svg" alt="ReformasLogo" id="LogoMartillo">
+</div>
   <div class="container">
+    <div id="image-gallery">
       <div class="row">
-          <div class="col-lg-7 mx-auto text-center">
-              <h1 class="display-4"></h1>
+        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 image">
+          <div class="img-wrapper">
+          <?php  require_once('conexion.php');
+	      if($conexion=mysqli_connect($servidor, $usuario, $password, $bbdd)){
+		    mysqli_query($conexion, "SET NAMES 'UTF8'");
+        if(mysqli_select_db($conexion, $bbdd)){
+			$consulta="SELECT nombre FROM fotos WHERE nombre='39worker_6586718_1920.jpg';";
+			$resultado=mysqli_query($conexion, $consulta);
+			while($dato=mysqli_fetch_array($resultado)){
+				echo "<img src='../img/reformas/$dato[nombre]' class='img-responsive'>";
+			} 	
+		}
+	mysqli_close($conexion);
+	}
+	/*FIN QUERY*/
+	?>
+            <div class="img-overlay">
+              <i class="fa fa-plus-circle" aria-hidden="true"></i>
+            </div>
           </div>
-      </div>
-  </div>
-</div>
-<!--Fin del Hero -->
- <!-- SERVICES, indicaremos nuestros servicios -->
- <section id="services">
-  <div class="container">
-      <div class="row mb-5">
-          <div class="col-md-8 mx-auto text-center">
-              <h1  id="sobre_nosotros">Sobre nosotros</h1>
-              <p>SERVICIO “Llave en Mano”, que liberan al cliente de las GESTIONES Y TRÁMITES:</p>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 image">
+          <div class="img-wrapper">
+          <?php  require_once('conexion.php');
+	      if($conexion=mysqli_connect($servidor, $usuario, $password, $bbdd)){
+		    mysqli_query($conexion, "SET NAMES 'UTF8'");
+        if(mysqli_select_db($conexion, $bbdd)){
+			$consulta="SELECT nombre FROM fotos WHERE nombre='11construction-2578410_1920.jpg';";
+			$resultado=mysqli_query($conexion, $consulta);
+			while($dato=mysqli_fetch_array($resultado)){
+				echo "<img src='../img/reformas/$dato[nombre]' class='img-responsive'>";
+			} 	
+		}
+	mysqli_close($conexion);
+	}
+	/*FIN QUERY*/
+	?>
+            <div class="img-overlay">
+              <i class="fa fa-plus-circle" aria-hidden="true"></i>
+            </div>
           </div>
-      </div>
-      <div class="row g-4">
-          <div class="col-lg-4 col-sm-6">
-              <div class="service card-effect bounceInUp">
-                  <div class="iconbox">
-                      <i class='bx bxs-check-shield'></i>
-                  </div>
-                  <h5 class="mt-4 mb-2">FINANCIACIÓN</h5>
-                  <p>Nuestros principales clientes son las Comunidades de Propietarios.  </p>
-              </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 image">
+          <div class="img-wrapper">
+          <?php  require_once('conexion.php');
+	      if($conexion=mysqli_connect($servidor, $usuario, $password, $bbdd)){
+		    mysqli_query($conexion, "SET NAMES 'UTF8'");
+        if(mysqli_select_db($conexion, $bbdd)){
+			$consulta="SELECT nombre FROM fotos WHERE nombre='12construction-6475766_1920.jpg';";
+			$resultado=mysqli_query($conexion, $consulta);
+			while($dato=mysqli_fetch_array($resultado)){
+				echo "<img src='../img/reformas/$dato[nombre]' class='img-responsive'>";
+			} 	
+		}
+	mysqli_close($conexion);
+	}
+	/*FIN QUERY*/
+	?>
+            <div class="img-overlay">
+              <i class="fa fa-plus-circle" aria-hidden="true"></i>
+            </div>
           </div>
-          <div class="col-lg-4 col-sm-6">
-              <div class="service card-effect">
-                  <div class="iconbox">
-                      <i class='bx bxs-comment-detail'></i>
-                  </div>
-                  <h5 class="mt-4 mb-2">HONORARIOS TÉCNICOS</h5>
-                  <p>Proyecto, Dirección de obra, cumplimiento de Seguridad y Salud… </p>
-              </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 image">
+          <div class="img-wrapper">
+          <?php  require_once('conexion.php');
+	      if($conexion=mysqli_connect($servidor, $usuario, $password, $bbdd)){
+		    mysqli_query($conexion, "SET NAMES 'UTF8'");
+        if(mysqli_select_db($conexion, $bbdd)){
+			$consulta="SELECT nombre FROM fotos WHERE nombre='13construction-site-3562156_1920.jpg';";
+			$resultado=mysqli_query($conexion, $consulta);
+			while($dato=mysqli_fetch_array($resultado)){
+				echo "<img src='../img/reformas/$dato[nombre]' class='img-responsive'>";
+			} 	
+		}
+	mysqli_close($conexion);
+	}
+	/*FIN QUERY*/
+	?>
+            <div class="img-overlay">
+              <i class="fa fa-plus-circle" aria-hidden="true"></i>
+            </div>
           </div>
-          <div class="col-lg-4 col-sm-6">
-              <div class="service card-effect">
-                  <div class="iconbox">
-                      <i class='bx bxs-cog'></i>
-                  </div>
-                  <h5 class="mt-4 mb-2">SUBVENCIONES</h5>
-                  <p>Experiencia en convocatorias anteriores y CONSTANCIA. </p>
-              </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 image">
+          <div class="img-wrapper">
+          <?php  require_once('conexion.php');
+	      if($conexion=mysqli_connect($servidor, $usuario, $password, $bbdd)){
+		    mysqli_query($conexion, "SET NAMES 'UTF8'");
+        if(mysqli_select_db($conexion, $bbdd)){
+			$consulta="SELECT nombre FROM fotos WHERE nombre='14craftsmen-19584_1920.jpg';";
+			$resultado=mysqli_query($conexion, $consulta);
+			while($dato=mysqli_fetch_array($resultado)){
+				echo "<img src='../img/reformas/$dato[nombre]' class='img-responsive'>";
+			} 	
+		}
+	mysqli_close($conexion);
+	}
+	/*FIN QUERY*/
+	?>
+            <div class="img-overlay">
+              <i class="fa fa-plus-circle" aria-hidden="true"></i>
+            </div>
           </div>
-          <div class="col-lg-4 col-sm-6">
-              <div class="service card-effect">
-                  <div class="iconbox">
-                      <i class='bx bxs-heart'></i>
-                  </div>
-                  <h5 class="mt-4 mb-2">LICENCIA Y PERMISOS OCUPACIÓN</h5>
-                  <p>Ante Ayuntamiento y/ó Junta Municipal correspondiente. </p>
-              </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 image">
+          <div class="img-wrapper">
+          <?php  require_once('conexion.php');
+	      if($conexion=mysqli_connect($servidor, $usuario, $password, $bbdd)){
+		    mysqli_query($conexion, "SET NAMES 'UTF8'");
+        if(mysqli_select_db($conexion, $bbdd)){
+			$consulta="SELECT nombre FROM fotos WHERE nombre='24housebuilding_3370969_1920.jpg';";
+			$resultado=mysqli_query($conexion, $consulta);
+			while($dato=mysqli_fetch_array($resultado)){
+				echo "<img src='../img/reformas/$dato[nombre]' class='img-responsive'>";
+			} 	
+		}
+	mysqli_close($conexion);
+	}
+	/*FIN QUERY*/
+	?>
+            <div class="img-overlay">
+              <i class="fa fa-plus-circle" aria-hidden="true"></i>
+            </div>
           </div>
-          <div class="col-lg-4 col-sm-6">
-              <div class="service card-effect">
-                  <div class="iconbox">
-                      <i class='bx bxs-rocket'></i>
-                  </div>
-                  <h5 class="mt-4 mb-2">IREHMA ofrece</h5>
-                  <p>Equipo con EXPERIENCIA  de años en REHABILITACIÓN (Técnicos y Trabajadores cualificados)
-
-                    CUMPLIMIENTO  de  la CALIDAD ofrecida en presupuestos así como con  los PLAZOS de ejecución pactados.
-                    
-                    IMPLICACIÓN en nuestras GESTIONES de principio a fin. 
-                    
-                    INTERÉS en cada OBRA por conseguir el mejor resultado. Nuestra mejor publicidad son los CLIENTES SATISFECHOS. 
-                     </p>
-              </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 image">
+          <div class="img-wrapper">
+          <?php  require_once('conexion.php');
+	      if($conexion=mysqli_connect($servidor, $usuario, $password, $bbdd)){
+		    mysqli_query($conexion, "SET NAMES 'UTF8'");
+        if(mysqli_select_db($conexion, $bbdd)){
+			$consulta="SELECT nombre FROM fotos WHERE nombre='28men-7031828_1920.jpg';";
+			$resultado=mysqli_query($conexion, $consulta);
+			while($dato=mysqli_fetch_array($resultado)){
+				echo "<img src='../img/reformas/$dato[nombre]' class='img-responsive'>";
+			} 	
+		}
+	mysqli_close($conexion);
+	}
+	/*FIN QUERY*/
+	?>
+            <div class="img-overlay">
+              <i class="fa fa-plus-circle" aria-hidden="true"></i>
+            </div>
           </div>
-          <div class="col-lg-4 col-sm-6">
-              <div class="service card-effect">
-                  <div class="iconbox">
-                      <i class='bx bxs-doughnut-chart'></i>
-                  </div>
-                  <h5 class="mt-4 mb-2">¡¡Conócenos!!</h5>
-                  <p>Empresa  Especializada en la Conservación  y Rehabilitación de Edificios</p>
-              </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 image">
+          <div class="img-wrapper">
+          <?php  require_once('conexion.php');
+	      if($conexion=mysqli_connect($servidor, $usuario, $password, $bbdd)){
+		    mysqli_query($conexion, "SET NAMES 'UTF8'");
+        if(mysqli_select_db($conexion, $bbdd)){
+			$consulta="SELECT nombre FROM fotos WHERE nombre='40housebuilding_1407462_1920.jpg';";
+			$resultado=mysqli_query($conexion, $consulta);
+			while($dato=mysqli_fetch_array($resultado)){
+				echo "<img src='../img/reformas/$dato[nombre]' class='img-responsive'>";
+			} 	
+		}
+	mysqli_close($conexion);
+	}
+	/*FIN QUERY*/
+	?>
+            <div class="img-overlay">
+              <i class="fa fa-plus-circle" aria-hidden="true"></i>
+            </div>
           </div>
-      </div>
-  </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 image">
+          <div class="img-wrapper">
+          <?php  require_once('conexion.php');
+	      if($conexion=mysqli_connect($servidor, $usuario, $password, $bbdd)){
+		    mysqli_query($conexion, "SET NAMES 'UTF8'");
+        if(mysqli_select_db($conexion, $bbdd)){
+			$consulta="SELECT nombre FROM fotos WHERE nombre='41renovations-738030_1920.jpg';";
+			$resultado=mysqli_query($conexion, $consulta);
+			while($dato=mysqli_fetch_array($resultado)){
+				echo "<img src='../img/reformas/$dato[nombre]' class='img-responsive'>";
+			} 	
+		}
+	mysqli_close($conexion);
+	}
+	/*FIN QUERY*/
+	?>
+            <div class="img-overlay">
+              <i class="fa fa-plus-circle" aria-hidden="true"></i>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 image">
+          <div class="img-wrapper">
+          <?php  require_once('conexion.php');
+	      if($conexion=mysqli_connect($servidor, $usuario, $password, $bbdd)){
+		    mysqli_query($conexion, "SET NAMES 'UTF8'");
+        if(mysqli_select_db($conexion, $bbdd)){
+			$consulta="SELECT nombre FROM fotos WHERE nombre='44contruction-1998232_1920.jpg';";
+			$resultado=mysqli_query($conexion, $consulta);
+			while($dato=mysqli_fetch_array($resultado)){
+				echo "<img src='../img/reformas/$dato[nombre]' class='img-responsive'>";
+			} 	
+		}
+	mysqli_close($conexion);
+	}
+	/*FIN QUERY*/
+	?>
+            <div class="img-overlay">
+              <i class="fa fa-plus-circle" aria-hidden="true"></i>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 image">
+          <div class="img-wrapper">
+          <?php  require_once('conexion.php');
+	      if($conexion=mysqli_connect($servidor, $usuario, $password, $bbdd)){
+		    mysqli_query($conexion, "SET NAMES 'UTF8'");
+        if(mysqli_select_db($conexion, $bbdd)){
+			$consulta="SELECT nombre FROM fotos WHERE nombre='42architect-3979490_1920.jpg';";
+			$resultado=mysqli_query($conexion, $consulta);
+			while($dato=mysqli_fetch_array($resultado)){
+				echo "<img src='../img/reformas/$dato[nombre]' class='img-responsive'>";
+			} 	
+		}
+	mysqli_close($conexion);
+	}
+	/*FIN QUERY*/
+	?>
+            <div class="img-overlay">
+              <i class="fa fa-plus-circle" aria-hidden="true"></i>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 image">
+          <div class="img-wrapper">
+          <?php  require_once('conexion.php');
+	      if($conexion=mysqli_connect($servidor, $usuario, $password, $bbdd)){
+		    mysqli_query($conexion, "SET NAMES 'UTF8'");
+        if(mysqli_select_db($conexion, $bbdd)){
+			$consulta="SELECT nombre FROM fotos WHERE nombre='43building-1510561_1920.jpg';";
+			$resultado=mysqli_query($conexion, $consulta);
+			while($dato=mysqli_fetch_array($resultado)){
+				echo "<img src='../img/reformas/$dato[nombre]' class='img-responsive'>";
+			} 	
+		}
+	mysqli_close($conexion);
+	}
+	/*FIN QUERY*/
+	?>
+            <div class="img-overlay">
+              <i class="fa fa-plus-circle" aria-hidden="true"></i>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 image">
+          <div class="img-wrapper">
+          <?php  require_once('conexion.php');
+	      if($conexion=mysqli_connect($servidor, $usuario, $password, $bbdd)){
+		    mysqli_query($conexion, "SET NAMES 'UTF8'");
+        if(mysqli_select_db($conexion, $bbdd)){
+			$consulta="SELECT nombre FROM fotos WHERE nombre='30rc29 B.JPG';";
+			$resultado=mysqli_query($conexion, $consulta);
+			while($dato=mysqli_fetch_array($resultado)){
+				echo "<img src='../img/reformas/$dato[nombre]' class='img-responsive'>";
+			} 	
+		}
+	mysqli_close($conexion);
+	}
+	/*FIN QUERY*/
+	?>
+            <div class="img-overlay">
+              <i class="fa fa-plus-circle" aria-hidden="true"></i>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 image">
+          <div class="img-wrapper">
+          <?php  require_once('conexion.php');
+	      if($conexion=mysqli_connect($servidor, $usuario, $password, $bbdd)){
+		    mysqli_query($conexion, "SET NAMES 'UTF8'");
+        if(mysqli_select_db($conexion, $bbdd)){
+			$consulta="SELECT nombre FROM fotos WHERE nombre='46construction-worker.jpg';";
+			$resultado=mysqli_query($conexion, $consulta);
+			while($dato=mysqli_fetch_array($resultado)){
+				echo "<img src='../img/reformas/$dato[nombre]' class='img-responsive'>";
+			} 	
+		}
+	mysqli_close($conexion);
+	}
+	/*FIN QUERY*/
+	?>
+            <div class="img-overlay">
+              <i class="fa fa-plus-circle" aria-hidden="true"></i>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 image">
+          <div class="img-wrapper">
+          <?php  require_once('conexion.php');
+	      if($conexion=mysqli_connect($servidor, $usuario, $password, $bbdd)){
+		    mysqli_query($conexion, "SET NAMES 'UTF8'");
+        if(mysqli_select_db($conexion, $bbdd)){
+			$consulta="SELECT nombre FROM fotos WHERE nombre='47laying-ceramic-tiles-trowelingr-.jpg';";
+			$resultado=mysqli_query($conexion, $consulta);
+			while($dato=mysqli_fetch_array($resultado)){
+				echo "<img src='../img/reformas/$dato[nombre]' class='img-responsive'>";
+			} 	
+		}
+	mysqli_close($conexion);
+	}
+	/*FIN QUERY*/
+	?>
+            <div class="img-overlay">
+              <i class="fa fa-plus-circle" aria-hidden="true"></i>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 image">
+          <div class="img-wrapper">
+          <?php  require_once('conexion.php');
+	      if($conexion=mysqli_connect($servidor, $usuario, $password, $bbdd)){
+		    mysqli_query($conexion, "SET NAMES 'UTF8'");
+        if(mysqli_select_db($conexion, $bbdd)){
+			$consulta="SELECT nombre FROM fotos WHERE nombre='25mas.jpg';";
+			$resultado=mysqli_query($conexion, $consulta);
+			while($dato=mysqli_fetch_array($resultado)){
+				echo "<img src='../img/reformas/$dato[nombre]' class='img-responsive'>";
+			} 	
+		}
+	mysqli_close($conexion);
+	}
+	/*FIN QUERY*/
+	?>
+            <div class="img-overlay">
+              <i class="fa fa-plus-circle" aria-hidden="true"></i>
+            </div>
+          </div>
+        </div>
+      </div><!-- End row -->
+    </div><!-- End image gallery -->
+  </div><!-- End container --> 
 </section>
-<!-- SERVICES -->
-
-  <!--Fin del contenedor-->
-</div>
+<br>
 <!-- INICIO DEL FOOTER-->
-<footer>
+<br>
+<footer class="fondo_footer">
   <div class="footer-top">
       <div class="container">
           <div class="row gy-4">
               <div class="col-lg-4">
-                  <img class="logo" src="#" alt="">
+                <img src="../img/logos/irehma footer.png" alt="irehma_footer" class="footerIrehma">
               </div>
               <div class="col-lg-2">
-                  <h5 class="text-black">Marca</h5>
+                  <h5 class="text-black">Irehma</h5>
                   <ul class="list-unstyled">
-                      <li><a href="#sobre_nosotros">Sobre nosotros</a></li>
-                      <li><a href="#">Servicios</a></li>
-                      <li><a href="#">Presupuesto</a></li>
+                      <li><a href="../index.html#sobre_nosotros">Sobre nosotros</a></li>
+                      <li><a href="../BBDD/otros_servicios.php">Servicios</a></li>
+                      <li><a href="../contacto/form_particular.html">Presupuesto</a></li>
                   </ul>
               </div>
               <div class="col-lg-2">
                   <h5 class="text-black">Más</h5>
                   <ul class="list-unstyled">
-                      <li><a href="#">FAQ's</a></li>
-                      <li><a href="#">Política de privacidad </a></li>
-                      <li><a href="#">Shipment</a></li>
+                      <li><a href="../FAQ's/faqs.html">FAQ's</a></li>
                   </ul>
               </div>
               <div class="col-lg-4" id="contacta">
-                  <h5 class="text-black">Contact</h5>
+                  <h5 class="text-black">Contacto</h5>
                   <ul class="list-unstyled">
-                      <li>Dirección: Pasaje las castellanas 1070</li>
-                      <li>Correo: irehma@gmail.com</li>
-                      <li>Teléfono: 676152810</li>
+                      <li>Dirección: Pasaje las castellanas 1070 28830 San Fernando de Henares, Madrid</li>
+                      <li>Correo: info@irehma.es</li>
+                      <li>Teléfono: 654111201</li>
                   </ul>
               </div>
           </div>
@@ -173,84 +438,24 @@
   </div>
   <div class="footer-bottom py-3">
       <div class="container">
-          <div class="row">
+          <div class="row1">
               <div class="col-md-6">
-                  <p class="mb-0">© 2022 copyright all right reserved | Designed by Aitor Mendoza <i
-                      class="bx bx-heart text-danger"></i>
+               
+                  <p class="mb-0">© 2022 copyright all right reserved | Designed by Aitor Mendoza 
               </div>
           </div>
       </div>
   </div>
 </footer>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<!--Icons-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<!--Icons-->
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script>
+<script  src="../js/js.js"></script>
+
 </body>
 </html>
-<section id="contenedor">
-	<h1>Listado de reformas</h1>
-
-	<?php
-	// <?php levanta interprete de php.
-
-	/* Conectar archivo conexion a este archivo. (include('conexion_agenda.php')---Para conectar y si dar error sigue la ejecucion del programa.)*/
-	require('conexion.php');
-	// echo sirve para mostrar info por pantalla.
-	// 1.- Conexion.
-	if($conexion=mysqli_connect($servidor, $usuario, $password, $bbdd)){
-		// Entramos por aqui...
-		mysqli_query($conexion, "SET NAMES 'UTF8'");
-		// 2.- Seleccionamos la base de datos. 	
-		if(mysqli_select_db($conexion, $bbdd)){
-			// 3.- Definimos la query.
-			$consulta="SELECT * FROM reformas ORDER BY cod_reforma;";
-			// 4.- Ejecutar la query.
-			$resultado=mysqli_query($conexion, $consulta);
-			// 5.- Comprobar.
-			//Si hay algun error, lo muestro en caso contrario continuo con el WHILE.
-			if(mysqli_errno($conexion)!=0){
-				//Quiere decir que hay un error.
-				echo "<p>No error: ".mysqli_errno($conexion)."</p>";
-				echo "<p>Mensaje error: ".mysqli_error($conexion)."</p>";
-			} else{
-				//Quiere decir que no hay error.
-			}
-			// 6.- Mostrar datos por pantalla (Si es un query SELECT)
-
-			while($dato=mysqli_fetch_array($resultado)){
-				//echo "<p class='negrita'>".$dato["nombre"]." ".$dato["apellidos"]."</p>";
-
-				echo "<p><a href='mostrar_reformas.php?codigo=$dato[0]'>$dato[nombre]</a></p>";
-			} 
-		}
-        if(mysqli_select_db($conexion, $bbdd)){
-			// 3.- Definimos la query.
-			$consulta="SELECT * FROM fotos ORDER BY cod_foto;";
-			// 4.- Ejecutar la query.
-			$resultado=mysqli_query($conexion, $consulta);
-			// 5.- Comprobar.
-			//Si hay algun error, lo muestro en caso contrario continuo con el WHILE.
-			if(mysqli_errno($conexion)!=0){
-				//Quiere decir que hay un error.
-				echo "<p>No error: ".mysqli_errno($conexion)."</p>";
-				echo "<p>Mensaje error: ".mysqli_error($conexion)."</p>";
-			} else{
-				//Quiere decir que no hay error.
-			}
-			// 6.- Mostrar datos por pantalla (Si es un query SELECT)
-
-			while($dato=mysqli_fetch_array($resultado)){
-				//echo "<p class='negrita'>".$dato["nombre"]." ".$dato["apellidos"]."</p>";
-
-				echo "<img src='../img/reformas/$dato[nombre]'>";
-			} 	
-		}
-	// 7.- Cerramos la conexion.
-	mysqli_close($conexion);
-	}
-	/* ?> cierra el interprete.*/
-	?>
-</section>
-</body>
-</html>
-
-
-

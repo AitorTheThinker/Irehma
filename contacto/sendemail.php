@@ -51,6 +51,15 @@ try {
 
     $mail->send();
     echo 'El mensaje se envió correctamente';
+    
+$location='http://www.irehma.es';
+$redirect=true;
+
+if($redirect && !empty($location)){
+    header('Location:'. $location);
+    exit;
+}
+
 } catch (Exception $e) {
     echo "Hubo un error al enviar el mensaje {$mail->ErrorInfo}";
 }
@@ -83,5 +92,6 @@ try {
     echo "El mensaje no puede estar vacío.";
     die();
   }
+
 ?>
 

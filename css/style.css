@@ -1,27 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:ital,wght@0,100;1,400&display=swap');
-
+/*Paleta de colores */
 :root{
     --golden:#DD9A00;
-    --dark:black;
+    --dark:#24292F;
     --green:#007D00;
     --white:#FFFFFC;
     --red:#E71D36;
-    --box-shadow: 0 5px 5px #DD9A00;
-    
 }
-
+/*Estilos generales */
 body {
+    background-color: var(--dark);
     line-height: 2;
-    color:var(--dark);
-    background-color: var(--golden);
+    color: var(--white);
 }
-
-h1,h2,h3,h4,h5,h6,
-.display-4{
-    color: var(--green);
-    font-weight: 100;
-}
-
 a{
     color: var(--green);
     text-decoration: none;
@@ -29,21 +20,70 @@ a{
 }
 a:hover {
     color: var(--red);
+    text-decoration:none;
   }
-nav .logo{
-    width: 125px;
+h5{
+    font-weight: bold;
+    font-size: 25px;
+    color: var(--green);
+    text-align: center;
 }
-
-.navbar .nav-link{
+.container{
+    margin-top: 100px;
+}
+/* Primera columna*/
+.firstRow  p{
+    color: var(--white);
+    text-align: center;
+  }
+/*Barra de navegación*/
+.logo{
+    width: 135px;
+    
+}
+.navbar{
+    background-color: var(--white);
+    font-weight: bold;
     font-size: 20px;
-    font-weight: 700px;
 }
-
+/* Social Nework */
+.navbarIcons{
+    position:abosolute;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbarIcons li a{
+    transition: color 0.3s ease 0s;
+}
+.navbarIcons {
+    padding: 5px 15px;
+    background-color: var(--dark);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease 0s;
+    color: #edf0f1;
+    box-shadow: 0 0 10px black;
+    text-shadow: 0 0 2px black;
+    text-decoration: none;
+    text-transform: uppercase;
+    left: 40%;
+  }
+  .navbarIcons{
+    justify-content: center;
+    align-items: center;
+  
+  }
+/* 1erHero Imagen de fondo de index*/
 .hero{
     background-image: url("../img/logos/negro.png");
     background-position:center;
     background-size:cover;
     background-attachment:fixed;
+    background-repeat: no-repeat;
+    position: relative;
 }
 
 .hero:after{
@@ -55,11 +95,101 @@ nav .logo{
     left: 0;
     background-color: rgba(21, 20, 51, 0.0.8);
 }
-.hero2Form{
-    background-image: url("../img/background/architecture-1857175_1920.jpg");
+/* 2do Hero Imagen de fondo de otros servicios*/
+.hero2OtrosServicios{
+    background-image: url("../img/logos/OtrosServicios.png");
     background-position:center;
     background-size:cover;
     background-attachment:fixed;
+    z-index: -1;
+}
+.hero2OtrosServicios:after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(21, 20, 51, 0.0.8);
+  z-index: -1;
+}
+.hero2OtrosServicios h1{
+    font-size: 110px;
+    font-weight: bold;
+    color: var(--green);
+    margin: 0;
+    position: absolute;
+    left:28%;
+    top: 50%;
+
+}
+/*Cartas de servicios de Irehma */
+.card-effect{
+    box-shadow: var(--box-shadow);
+    background-color: var(--white);
+    transition: all 0.25s ease;
+}
+
+.card-effect:hover{
+    box-shadow: none;
+    transform: translateY(5px);
+}
+
+.card-img-top{
+    width: 405px;
+    height: 288px;
+    padding: 20px;
+    padding-right: 20px;
+}
+/* Imagen de servicios*/
+#llave_en_mano{
+    width: 370px;
+    height: 250px;
+}
+/*Botones*/
+.btn{
+    font-size: 20px;
+    position: relative;
+    border-radius: 30px;
+    color: var(--white);
+    background-color: var(--green)
+}
+.card-text{
+color: var(--dark);
+}
+/*Container Proyecto */
+.cardP-img-top{
+    width: 405px;
+    height: 288px;
+    margin-left: 45px;
+}
+.containerProyecto p{
+    color:var(--white);
+    margin-bottom: 5%;
+}
+.service{
+    color:var(--dark);
+
+}
+.service h5  {
+    text-align: center;
+
+}
+h1{
+    text-align: center;
+    margin-top: 10%;
+}
+#irehmaProyecto{
+    height: 600px;
+    z-index: -1;
+}
+/*ESTILO FORMULARIO */
+.hero2Form{
+    background-image: url("../img/logos/interrogante.png");
+    background-position:center;
+    background-size:cover;
+    background-attachment:fixed;
+    z-index: -1;
 }
 .hero2Form:after{
     content: "";
@@ -69,20 +199,400 @@ nav .logo{
     top: 0;
     left: 0;
     background-color: rgba(21, 20, 51, 0.0.8);
-  
+  z-index: -1;
 }
-section{
-    padding-top: 120px;
-    padding-bottom: 120px;
-}
-.card-effect{
-    box-shadow: var(--box-shadow);
+#form{
     background-color: var(--white);
-    padding: 25px;
-    transition: all 0.25s ease;
+    border-radius: 2%;
+    border-color: #DD9A00;
+    box-sizing: border-box;
+    z-index: 1;
+    background-image: url("../img/logos/interrogante.png");
+}
+label{
+    color: var(--green);
+    }
+.gmap_canvas{
+    width: 250px;
+    height: 215px;
+    position: relative;
+    
+    }
+/* FAQ's*/
+.accordion-section .panel-default > .panel-heading {
+    border: 0;
+    background-color: var(--white);
+    padding: 0;
+   
+}
+.accordion-section .panel-default .panel-title a {
+    display: block;
+    font-style: italic;
+    font-size: 1.5rem;
+    
+    
+}
+.accordion-section .panel-default .panel-title a:after {
+    font-size: 3rem;
+    content: "\f106";
+    color: var(--golden);
+    float: right;
+    margin-top: -12px;
+    
+    
+}
+.accordion-section .panel-default .panel-title a.collapsed:after {
+    content: "\f107";
+}
+.accordion-section .panel-default .panel-body {
+    font-size: 1.2rem;
+    background-color: var(--white);
+    color: var(--dark);
+}
+/* Querys*/
+/*280px */
+@media (min-width: 280px) { 
+    .hero{
+        background-image: url("../img/logos/negro.png");
+        background-position:center;
+        background-size: 360px 655px;
+        background-attachment:fixed;
+        background-repeat: no-repeat;
+        position: relative;
+        background-color: var(--white);
+        
+    }
+    .hero2OtrosServicios{
+        background-image: url("../img/logos/OtrosServicios.png");
+        background-position:center;
+        background-size:360px 655px;;
+        background-attachment:fixed;
+        background-repeat: no-repeat;
+        position: relative;
+        margin: 0;
+        padding: 0;
+    }
+}
+@media (min-width: 360px) { 
+    .hero{
+        background-image: url("../img/logos/negro.png");
+        background-position:center;
+        background-size: 450px 700px;
+        background-attachment:fixed;
+        background-repeat: no-repeat;
+        position: relative;
+        background-color: var(--white);
+    }
+    .hero2OtrosServicios{
+        background-image: url("../img/logos/OtrosServicios.png");
+        background-position:center;
+        background-size:450px 700px;;
+        background-attachment:fixed;
+        background-repeat: no-repeat;
+        position: relative;
+        margin: 0;
+        padding: 0;
+    }
+}
+@media (min-width: 374px) { 
+    .hero{
+        background-image: url("../img/logos/negro.png");
+        background-position:center;
+        background-size:555px 700px;
+        background-attachment:fixed;
+        background-repeat: no-repeat;
+        position: relative;
+    }
+    .hero2OtrosServicios{
+        background-image: url("../img/logos/OtrosServicios.png");
+        background-position:center;
+        background-size:555px 700px;;
+        background-attachment:fixed;
+        background-repeat: no-repeat;
+        position: relative;
+        margin: 0;
+        padding: 0;
+    }
+
+}
+@media (min-width: 570px) { 
+    .hero{
+        background-image: url("../img/logos/negro.png");
+        background-position:center;
+        background-size:755px 700px;
+        background-attachment:fixed;
+        background-repeat: no-repeat;
+        position: relative;
+    }
+    .hero2OtrosServicios{
+        background-image: url("../img/logos/OtrosServicios.png");
+        background-position:center;
+        background-size:755px 700px;;
+        background-attachment:fixed;
+        background-repeat: no-repeat;
+        position: relative;
+        margin: 0;
+        padding: 0;
+    }
+}
+@media (min-width: 576px) { 
+    .hero{
+        background-image: url("../img/logos/negro.png");
+        background-position:center;
+        background-size:800px 700px;
+        background-attachment:fixed;
+        background-repeat: no-repeat;
+        position: relative;
+        margin: 0;
+        padding: 0;
+    }
+    .hero2OtrosServicios{
+        background-image: url("../img/logos/OtrosServicios.png");
+        background-position:center;
+        background-size:800px 700px;;
+        background-attachment:fixed;
+        background-repeat: no-repeat;
+        position: relative;
+        margin: 0;
+        padding: 0;
+    }
+
 }
 
-.card-effect:hover{
-    box-shadow: none;
-    transform: translateY(5px);
+/*Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {  
+    .hero{
+        background-image: url("../img/logos/negro.png");
+        background-position:center;
+        background-size:1000px 700px;
+        background-attachment:fixed;
+        background-repeat: no-repeat;
+        position: relative;
+        margin: 0;
+        padding: 0;
+    }
+    .hero2OtrosServicios{
+        background-image: url("../img/logos/OtrosServicios.png");
+        background-position:center;
+        background-size:1000px;
+        background-attachment:fixed;
+        background-repeat: no-repeat;
+        position: relative;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+/*Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) {       
+    .hero{
+    background-image: url("../img/logos/negro.png");
+    background-position:center;
+    background-size:1400px;
+    background-attachment:fixed;
+    background-repeat: no-repeat;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+.hero2OtrosServicios{
+    background-image: url("../img/logos/OtrosServicios.png");
+    background-position:center;
+    background-size:1400px;
+    background-attachment:fixed;
+    background-repeat: no-repeat;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+}
+
+/* Extra large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {      
+    .hero{
+    background-image: url("../img/logos/negro.png");
+    background-position:center;
+    background-size:1678px;
+    background-attachment:fixed;
+    background-repeat: no-repeat;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+.hero2OtrosServicios{
+    background-image: url("../img/logos/OtrosServicios.png");
+    background-position:center;
+    background-size:1678px;
+    background-attachment:fixed;
+    background-repeat: no-repeat;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+}
+@media (min-width: 1300px) {      
+    .hero{
+    background-image: url("../img/logos/negro.png");
+    background-position:center;
+    background-size:1678px;
+    background-attachment:fixed;
+    background-repeat: no-repeat;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+.hero2OtrosServicios{
+    background-image: url("../img/logos/OtrosServicios.png");
+    background-position:center;
+    background-size:1678px;
+    background-attachment:fixed;
+    background-repeat: no-repeat;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+}
+@media (min-width: 1920px) {      
+    .hero{
+    background-image: url("../img/logos/negro.png");
+    background-position:center;
+    background-size:1978px;
+    background-attachment:fixed;
+    background-repeat: no-repeat;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    
+}
+.hero2OtrosServicios{
+    background-image: url("../img/logos/OtrosServicios.png");
+    background-position:center;
+    background-size:cover;
+    background-attachment:fixed;
+    background-repeat: no-repeat;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+}
+@media (max-width: 1000px) {
+    .card-img-top {
+        width: 265px;
+        height: 288px;
+        padding: 20px;
+        padding-right: 20px;
+    }
+    .card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+        word-wrap: break-word;
+        background-color: #fff;
+        background-clip: border-box;
+        border: 1px solid rgba(0,0,0,.125);
+        border-radius: 0.25rem;
+    }
+
+}
+@media (max-width: 1100px) {
+    .card-img-top {
+        width: 265px;
+        height: 288px;
+        padding: 20px;
+        padding-right: 20px;
+    }
+    .card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+        word-wrap: break-word;
+        background-color: #fff;
+        background-clip: border-box;
+        border: 1px solid rgba(0,0,0,.125);
+        border-radius: 0.25rem;
+    }
+
+}
+@media (max-width: 1200px) {
+    .card-img-top {
+        width: 265px;
+        height: 288px;
+        padding: 20px;
+        padding-right: 20px;
+    }
+    .card {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+        word-wrap: break-word;
+        background-color: #fff;
+        background-clip: border-box;
+        border: 1px solid rgba(0,0,0,.125);
+        border-radius: 0.25rem;
+    }
+
+}
+@media (max-width: 1300px) {
+    .card-img-top {
+        width: 285px;
+        height: 288px;
+        padding: 20px;
+        padding-right: 20px;
+    }
+    .card {
+        margin-top: 50px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+        word-wrap: break-word;
+        background-color: #fff;
+        background-clip: border-box;
+        border: 1px solid rgba(0,0,0,.125);
+        border-radius: 0.25rem;
+    }
+
+}
+@media (max-width: 1395px) {
+    .card-img-top {
+        width: 325px;
+        height: 288px;
+        padding: 20px;
+        padding-right: 20px;
+    }
+    .card {
+        margin-top: 250px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+        word-wrap: break-word;
+        background-color: #fff;
+        background-clip: border-box;
+        border: 1px solid rgba(0,0,0,.125);
+        border-radius: 0.25rem;
+    }
+
+}
+
+
+/*Footer */
+.fondo_footer{
+    background-color: var(--golden);
+    color: var(--green);
+}
+.footerIrehma{
+    width: 55%;
+    height: 55%;
+    max-width: 500px;
+    
+}
+.footer-botton h5, p, a,li{
+    text-align: center;
+    font-size: 20px;
 }

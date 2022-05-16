@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link a galería de bootstrap  --> 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="icon" href="/img/logos/negro.png" type="image/gif" sizes="16x16">
+    <script src="../js/js.js"></script>
+    <link rel="icon" href="../img/logos/Irehma.png" type="image/gif" sizes="16x16">
     <title>IREHMA</title>
 </head>
-<body>
-
 <body>  
-  <div class="inside-top-bar grid-container grid-parent" style="background-color: #F7F0F0;"><aside id="custom_html-2" class="widget_text widget inner-padding widget_custom_html">
-    <div class="textwidget custom-html-widget"><p style="text-align:center">¿Piensas hacer una reforma en tu comunidad? <strong>Llama ahora al <a href="tel:+34676152810" rel="nofollow">676152810</a> o <a href="#contacta" rel="nofollow">contacta</a></div>
-    <nav class="navbar sticky-top navbar-expand-lg navbar-light " style="background-color: #DD9A00;"> 
+<div class="inside-top-bar grid-container grid-parent" ><aside class="widget_text widget inner-padding widget_custom_html">
+    <div class="firstRow"><p>¿Piensas hacer una reforma en tu comunidad? <strong>Llama ahora al <a href="tel:+34654111201" rel="nofollow">654111201</a> o <a href="./contacto/form_particular.html" rel="nofollow">contacta</a></strong></div>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light "> 
         <div class="container-fluid">
           <a class="navbar-brand" href="../index.html"> <img  class="logo" src="../img/logos/blanco.png">
           </a>
@@ -41,59 +41,62 @@
               <!-- Presupuesto para Particulares y Empresas-->
                 <li class="nav-item">
                         <a class="nav-link" href="../contacto/form_particular.html">Contacto</a>
-                      </li>
+                </li>
               </li>
+            </ul>
+            <ul class="navbarIcons me-auto mb-2 mb-lg-0">
+              <li class="nav-item"><a class="social-icon" href="https://www.instagram.com/irehmadrid/" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a></li>
+              <li class="nav-item"><a class="social-icon" href="https://www.facebook.com/Irehma-104627448911974" target="_blank"><ion-icon name="logo-facebook" ></ion-icon></a></li>
+              <li class="nav-item"><a class="social-icon" href="https://twitter.com/irehmamadrid" target="_blank"><ion-icon name="logo-twitter" ></ion-icon></a></li>
+              <li class="nav-item"><a class="social-icon" href="https://www.youtube.com/channel/UCGFSYqJb2E5k2j1EgTfAUoQ" target="_blank" ><ion-icon name="logo-youtube"></ion-icon></a></li>
             </ul>
           </div>
         </div>
       </nav>
 
 <!-- HERO -->
-<div class="hero vh-100 d-flex align-items-center" id="home">
-  <div class="container">
-      <div class="row">
-          <div class="col-lg-7 mx-auto text-center">
-              <h1 class="display-4"></h1>
-          </div>
-      </div>
-  </div>
-</div>
-<!--Fin del Hero -->
- <!-- SERVICES, indicaremos nuestros servicios -->
- <section id="services">
-  <div class="container">
-      <div class="row mb-5">
+  <div class="containerProyecto">
           <div class="col-md-8 mx-auto text-center">
-              <h1  id="sobre_nosotros">Sobre nosotros</h1>
-              <p>SERVICIO “Llave en Mano”, que liberan al cliente de las GESTIONES Y TRÁMITES:</p>
+              <h1  id="sobre_nosotros">Proyecto Irehma</h1> 
+              <p>Para hacer realidad cada proyecto, analizamos, estudiamos y planteamos la viabilidad
+                técnica y económica para que puedan hacer frente a esta inversión, buscando el equilibrio entre inversión y
+                retorno.</p>
           </div>
       </div>
       <div class="row g-4">
+          
           <div class="col-lg-4 col-sm-6">
+          <h1 class="siglas">Inversión</h1>
               <div class="service card-effect bounceInUp">
                   <div class="iconbox">
                       <i class='bx bxs-check-shield'></i>
                   </div>
-                  <h5 class="mt-4 mb-2">FINANCIACIÓN</h5>
-                  <p>Nuestros principales clientes son las Comunidades de Propietarios.  </p>
+                  <h5 class="mt-4 mb-2">Ahorro energético</h5>
+                  <img src="../img/proyecto/money-4068357_640.png" class="cardP-img-top"  alt="">
+                 
+                  <p>Reduce la factura de la luz y/o gas (más de 35% de ahorro)</p>
               </div>
           </div>
           <div class="col-lg-4 col-sm-6">
+          <h1 class="siglas">REHabilitación</h1>
               <div class="service card-effect">
                   <div class="iconbox">
                       <i class='bx bxs-comment-detail'></i>
                   </div>
-                  <h5 class="mt-4 mb-2">HONORARIOS TÉCNICOS</h5>
-                  <p>Proyecto, Dirección de obra, cumplimiento de Seguridad y Salud… </p>
+                  <h5 class="mt-4 mb-2">Medios auxiliares</h5>
+                  <img src="../img/reformas/7Andamio.jpg" class="cardP-img-top"  alt="">
+                  <p>Andamio propio y sistemas de descuelgue vertical </p>
               </div>
           </div>
           <div class="col-lg-4 col-sm-6">
+          <h1 class="siglas">MAntenimiento</h1>
               <div class="service card-effect">
                   <div class="iconbox">
                       <i class='bx bxs-cog'></i>
                   </div>
-                  <h5 class="mt-4 mb-2">SUBVENCIONES</h5>
-                  <p>Experiencia en convocatorias anteriores y CONSTANCIA. </p>
+                  <h5 class="mt-4 mb-2">Conservación</h5>
+                  <img src="../img/proyecto/plumbing-840835_640.jpg" class="cardP-img-top" alt="">
+                  <p>Evita averías y/ó obras mayores </p>
               </div>
           </div>
           <div class="col-lg-4 col-sm-6">
@@ -101,8 +104,11 @@
                   <div class="iconbox">
                       <i class='bx bxs-heart'></i>
                   </div>
-                  <h5 class="mt-4 mb-2">LICENCIA Y PERMISOS OCUPACIÓN</h5>
-                  <p>Ante Ayuntamiento y/ó Junta Municipal correspondiente. </p>
+                  <h5 class="mt-4 mb-2">Subvenciones</h5>
+                  <img src="../img/proyecto/energy-efficiency-154006_640.png" class="cardP-img-top" alt="">
+                  <p>Obras subvencionables:
+                      Conservación, Accesibilidad y/ó Eficiencia Energética
+                  </p>
               </div>
           </div>
           <div class="col-lg-4 col-sm-6">
@@ -110,14 +116,12 @@
                   <div class="iconbox">
                       <i class='bx bxs-rocket'></i>
                   </div>
-                  <h5 class="mt-4 mb-2">IREHMA ofrece</h5>
+                  <h5 class="mt-4 mb-2">Servicio "Llave en mano"</h5>
+                  <img src="../img/background/llave_en_mano.jpg" alt="Llave en mano" class="cardP-img-top">
+              <p>SERVICIO “Llave en Mano”, que liberan al cliente de las GESTIONES Y TRÁMITES:</p>
                   <p>Equipo con EXPERIENCIA  de años en REHABILITACIÓN (Técnicos y Trabajadores cualificados)
-
                     CUMPLIMIENTO  de  la CALIDAD ofrecida en presupuestos así como con  los PLAZOS de ejecución pactados.
-                    
                     IMPLICACIÓN en nuestras GESTIONES de principio a fin. 
-                    
-                    INTERÉS en cada OBRA por conseguir el mejor resultado. Nuestra mejor publicidad son los CLIENTES SATISFECHOS. 
                      </p>
               </div>
           </div>
@@ -126,67 +130,72 @@
                   <div class="iconbox">
                       <i class='bx bxs-doughnut-chart'></i>
                   </div>
-                  <h5 class="mt-4 mb-2">¡¡Conócenos!!</h5>
-                  <p>Empresa  Especializada en la Conservación  y Rehabilitación de Edificios</p>
+                  <h5 class="mt-4 mb-2">Informe de evaluación del edificio</h5>
+                  <img src="../img/proyecto/inspecion-tecnica-edificios-01.jpg" class="cardP-img-top" alt="">
+                  <p>Inspección del estado de Conservación(Estructura, Fachada, Cubierta, Instalaciones, Agua y Saneamiento)</p>
               </div>
+              
           </div>
       </div>
   </div>
-</section>
-<!-- SERVICES -->
-
+          </div>
+      </div>
+<!--Fin del Hero -->
   <!--Fin del contenedor-->
 </div>
+<br>
 <!-- INICIO DEL FOOTER-->
-<footer>
+<br>
+<footer class="fondo_footer">
   <div class="footer-top">
       <div class="container">
           <div class="row gy-4">
               <div class="col-lg-4">
-                  <img class="logo" src="#" alt="">
+                <img src="../img/logos/irehma footer.png" alt="irehma_footer" class="footerIrehma">
               </div>
               <div class="col-lg-2">
                   <h5 class="text-black">Marca</h5>
                   <ul class="list-unstyled">
-                      <li><a href="#sobre_nosotros">Sobre nosotros</a></li>
-                      <li><a href="#">Servicios</a></li>
-                      <li><a href="#">Presupuesto</a></li>
+                      <li><a href="../index.html#sobre_nosotros">Sobre nosotros</a></li>
+                      <li><a href="../BBDD/otros_servicios.php">Servicios</a></li>
+                      <li><a href="../contacto/form_particular.html">Presupuesto</a></li>
                   </ul>
               </div>
               <div class="col-lg-2">
                   <h5 class="text-black">Más</h5>
                   <ul class="list-unstyled">
-                      <li><a href="#">FAQ's</a></li>
-                      <li><a href="#">Política de privacidad </a></li>
-                      <li><a href="#">Shipment</a></li>
+                      <li><a href="../FAQ's/faqs.html">FAQ's</a></li>
                   </ul>
               </div>
               <div class="col-lg-4" id="contacta">
-                  <h5 class="text-black">Contact</h5>
+                  <h5 class="text-black">Contacto</h5>
                   <ul class="list-unstyled">
-                      <li>Dirección: Pasaje las castellanas 1070</li>
-                      <li>Correo: irehma@gmail.com</li>
-                      <li>Teléfono: 676152810</li>
+                      <li>Dirección: Pasaje las castellanas 1070 28830 San Fernando de Henares, Madrid</li>
+                      <li>Correo: info@irehma.es</li>
+                      <li>Teléfono: 654111201</li>
                   </ul>
               </div>
           </div>
       </div>
   </div>
   <div class="footer-bottom py-3">
+
+
       <div class="container">
-          <div class="row">
+          <div class="row1">
               <div class="col-md-6">
-                  <p class="mb-0">© 2022 copyright all right reserved | Designed by Aitor Mendoza <i
-                      class="bx bx-heart text-danger"></i>
+               
+                  <p class="mb-0">© 2022 copyright all right reserved | Designed by Aitor Mendoza 
               </div>
           </div>
       </div>
   </div>
 </footer>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-</body>
-</html>
-</body>
+      <!--Icons-->
+      <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+      <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    </body>
 </html>
 
 
